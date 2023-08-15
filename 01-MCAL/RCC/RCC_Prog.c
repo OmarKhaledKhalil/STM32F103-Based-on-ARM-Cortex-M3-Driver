@@ -17,19 +17,19 @@ void RCC_voidInitSysClock(void)
 {
 	#if RCC_CLOCK_TYPE   ==  RCC_HSE_CRYSTAL
 	     
-		 RCC_CR = 0x00010000; /* Enable HSE with no bypass */
-		 RCC_CFGR=0x00000001; /* Choose that Clock System is HSE */
+		 RCC_CR =  0x00010000; /* Enable HSE with no bypass */
+		 RCC_CFGR= 0x00000001; /* Choose that Clock System is HSE */
 	
         #elif RCC_CLOCK_TYPE ==  RCC_HSE_RC
 	
-	         RCC_CR = 0x00050000; /* Enable HSE with bypass ( RC Shall Clock Shall be Conncected) */
-		 RCC_CFGR=0x00000001 /* Choose that Clock System is HSE */
+	         RCC_CR =  0x00050000; /* Enable HSE with bypass ( RC Shall Clock Shall be Conncected) */
+		 RCC_CFGR= 0x00000001; /* Choose that Clock System is HSE */
 
 			 
 	#elif RCC_CLOCK_TYPE ==  RCC_HSI
 	
-	         RCC_CR = 0x00000081; /* Enable HSI +  Triming=0 */ 
-	         RCC_CFGR=0x00000000;
+	         RCC_CR =  0x00000081; /* Enable HSI +  Triming=0 */ 
+	         RCC_CFGR= 0x00000000;
 
 	
          #elif RCC_CLOCK_TYPE ==  RCC_PLL
