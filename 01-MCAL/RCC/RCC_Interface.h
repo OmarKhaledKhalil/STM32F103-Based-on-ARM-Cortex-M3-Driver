@@ -44,7 +44,7 @@ typedef enum
 	PWR     =  28
 	
 	
-}BusId_type;
+}PerId_type;
 
 typedef enum 
 {
@@ -52,10 +52,12 @@ typedef enum
 	RCC_APB  =   1,
 	RCC_APB2 =   2
 	
-}PerId_type;
+}BusId_type;
 
 void RCC_voidInitSysClock(void);
-void RCC_voidEnableClock(u8 Copy_u8BusId , u8 Copy_u8PerId);
-void RCC_voidDisableClock(u8 Copy_u8BusId , u8 Copy_u8PerId);
+
+void RCC_voidEnableClock (BusId_type Copy_BusId , PerId_type Copy_PerId);
+
+void RCC_voidDisableClock(BusId_type Copy_BusId , PerId_type Copy_PerId);
 
 #endif
