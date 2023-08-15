@@ -4,6 +4,8 @@
 /* Data   : 20-6-2023                                                                            */
 /*************************************************************************************************/
 
+
+
 #include "StdTypes.h"
 #include "Utils"
 
@@ -45,15 +47,15 @@ void RCC_voidInitSysClock(void)
 	 #endif
 }
 
-void RCC_voidEnableClock(u8 Copy_u8BusId , u8 Copy_u8PerId)
+void RCC_voidEnableClock(BusId_type Copy_BusId , PerId_type Copy_PerId)
 {
-	if (Copy_u8PerId<=31)
+	if (Copy_PerId<=31)
 	{
-		switch (Copy_u8BusId)
+		switch (Copy_BusId)
 		{
-			case RCC_AHB  : SET_BIT(RCC_AHBENR   ,Copy_u8PerId); break;
-			case RCC_APB1 : SET_BIT(RCC_AHPB1ENR ,Copy_u8PerId); break;
-			case RCC_APB2 : SET_BIT(RCC_AHPB2ENR ,Copy_u8PerId); break;
+			case RCC_AHB  : SET_BIT(RCC_AHBENR   ,Copy_PerId); break;
+			case RCC_APB1 : SET_BIT(RCC_AHPB1ENR ,Copy_PerId); break;
+			case RCC_APB2 : SET_BIT(RCC_AHPB2ENR ,Copy_PerId); break;
 		}
 	}
 	else
@@ -63,15 +65,15 @@ void RCC_voidEnableClock(u8 Copy_u8BusId , u8 Copy_u8PerId)
 	
 }
 
-void RCC_voidDisableClock(u8 Copy_u8BusId , u8 Copy_u8PerId)
+void RCC_voidDisableClock(BusId_type Copy_BusId , PerId_type Copy_PerId)
 {
-	if (Copy_u8PerId<=31)
+	if (Copy_PerId<=31)
 	{
-		switch (Copy_u8BusId)
+		switch (Copy_BusId)
 		{
-			case RCC_AHB  : CLR_BIT(RCC_AHBENR   ,Copy_u8PerId); break;
-			case RCC_APB1 : CLR_BIT(RCC_AHPB1ENR ,Copy_u8PerId); break;
-			case RCC_APB2 : CLR_BIT(RCC_AHPB2ENR ,Copy_u8PerId); break;
+			case RCC_AHB  : CLR_BIT(RCC_AHBENR   ,Copy_PerId); break;
+			case RCC_APB1 : CLR_BIT(RCC_AHPB1ENR ,Copy_PerId); break;
+			case RCC_APB2 : CLR_BIT(RCC_AHPB2ENR ,Copy_PerId); break;
 		}
 	}
 	else
