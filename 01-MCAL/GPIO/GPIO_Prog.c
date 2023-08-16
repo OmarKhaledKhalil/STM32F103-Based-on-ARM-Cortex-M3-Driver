@@ -100,7 +100,7 @@ void MGPIO_voidSetPinValue(u8 copy_u8Port , u8 copy_u8Pin , u8 copy_u8Value)
 					else if( copy_u8Pin == GPIO_LOW )
 					{
 						 
-						 CLR_BIT(GPIOA_ODR,copy_u8Pin);
+						CLR_BIT(GPIOA_ODR,copy_u8Pin);
 						
 					}
 					
@@ -117,7 +117,7 @@ void MGPIO_voidSetPinValue(u8 copy_u8Port , u8 copy_u8Pin , u8 copy_u8Value)
 					else if( copy_u8Pin == GPIO_LOW )
 					{
 						 
-						 CLR_BIT(GPIOB_ODR,copy_u8Pin);
+						CLR_BIT(GPIOB_ODR,copy_u8Pin);
 						
 					}
 					
@@ -134,7 +134,7 @@ void MGPIO_voidSetPinValue(u8 copy_u8Port , u8 copy_u8Pin , u8 copy_u8Value)
 					else if( copy_u8Pin == GPIO_LOW )
 					{
 						 
-						 CLR_BIT(GPIOC_ODR,copy_u8Pin);
+						CLR_BIT(GPIOC_ODR,copy_u8Pin);
 						
 					}
 					
@@ -155,18 +155,18 @@ u8 MGPIO_u8GetPinValue(u8 copy_u8Port , u8 copy_u8Pin)
 	{
 		case GPIOA :
 		
-		           LOC_u8Result = READ_BIT( GPIOA_IDR , copy_u8Pin );
+		                        LOC_u8Result = READ_BIT( GPIOA_IDR , copy_u8Pin );
 				   
 					break;
 					
 		case GPIOB :
 		
-		            LOC_u8Result = READ_BIT( GPIOB_IDR , copy_u8Pin );
+		                        LOC_u8Result = READ_BIT( GPIOB_IDR , copy_u8Pin );
 					
 					break;
 		case GPIOC :
 		            
-					LOC_u8Result = READ_BIT( GPIOC_IDR , copy_u8Pin );
+				        LOC_u8Result = READ_BIT( GPIOC_IDR , copy_u8Pin );
 					 
 					break;
 					
