@@ -53,8 +53,15 @@
 
 void MGPIO_voidSetPinDirection(u8 copy_u8Port , u8 copy_u8Pin , u8 copy_u8Mode);
 
-void MGPIO_voidSetPinValue(u8 copy_u8Port , u8 copy_u8Pin , u8 copy_u8Value);
+void  MGPIO_voidSetPinValue  (u8 copy_u8Port , u8 copy_u8Pin , u8 copy_u8Value);
 
-u8 MGPIO_u8GetPinValue(u8 copy_u8Port , u8 copy_u8Pin);
+ u8     MGPIO_u8GetPinValue     (   u8 copy_u8Port  ,    u8 copy_u8Pin  )      ;
+
+void MGPIO_voidSetPortODRValue    ( u8 copy_u8Port,      u16 copy_u16Value  )  ;
+
+void      MGPIO_voidLockPin       (   u8 copy_u8Port   ,   u8 copy_u8Pin  )    ;
+
+void     MGPIO_voidSetLCKR        (   u8 copy_u8Port   ,    u16 copy_u16Value );
+
 
 #endif
