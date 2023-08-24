@@ -153,5 +153,5 @@ u8   MNVIC_u8ReadActiveFlag     ( u8 Copy_u8IntNumber )
 		/* Return Error */
 	}
 	
-	return Local_Result ;
+        return Local_Result ;
 }
